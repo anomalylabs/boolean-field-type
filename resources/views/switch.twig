@@ -7,8 +7,8 @@
             type="checkbox"
             name="{{ field_type.input_name }}"
             {{ field_type.value ? 'checked' }}
-            data-on-text="{{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }}"
-            data-off-text="{{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }}"
+            data-on-text="{{ trans(field_type.config.on_text ? 'anomaly.field_type.boolean::choice.yes' : field_type.config.on_text) }}"
+            data-off-text="{{ trans(field_type.config.off_text ? 'anomaly.field_type.boolean::choice.no' : field_type.config.on_text) }}"
             data-disabled="{{ field_type.disabled ? 'true' : 'false' }}"
             data-on-color="{{ field_type.config.on_color }}"
             data-off-color="{{ field_type.config.off_color }}"
