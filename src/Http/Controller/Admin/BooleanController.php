@@ -1,7 +1,7 @@
-<?php namespace Anomaly\BooleanFieldType\Http\Controller;
+<?php namespace Anomaly\BooleanFieldType\Http\Controller\Admin;
 
 use Anomaly\Streams\Platform\Entry\Contract\EntryRepositoryInterface;
-use Anomaly\Streams\Platform\Http\Controller\PublicController;
+use Anomaly\Streams\Platform\Http\Controller\AdminController;
 use Anomaly\Streams\Platform\Stream\Contract\StreamRepositoryInterface;
 use Illuminate\Contracts\Container\Container;
 
@@ -12,14 +12,14 @@ use Illuminate\Contracts\Container\Container;
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
  */
-class BooleanController extends PublicController
+class BooleanController extends AdminController
 {
 
     /**
      * Toggle the boolean value.
      *
      * @param  StreamRepositoryInterface $streams
-     * @param  Container $container
+     * @param  Container                 $container
      * @throws \Exception
      */
     public function toggle(StreamRepositoryInterface $streams, Container $container)

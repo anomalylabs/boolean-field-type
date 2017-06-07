@@ -4,7 +4,7 @@ $(function () {
     $('[data-provides="ajax-switch"]').each(function () {
         $(this).bootstrapSwitch({
             onSwitchChange: function (e, state) {
-                $.post('/streams/boolean-field_type/toggle', {
+                $.post('/admin/boolean-field_type/toggle', {
                     state: state,
                     entry: $(this).data('entry'),
                     field: $(this).data('field'),
