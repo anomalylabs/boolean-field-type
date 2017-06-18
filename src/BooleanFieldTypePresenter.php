@@ -138,7 +138,7 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
      *
      * @return boolean
      */
-    public function __print()
+    public function __toString()
     {
         return (boolean) $this->value();
     }
