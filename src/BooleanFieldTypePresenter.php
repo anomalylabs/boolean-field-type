@@ -132,4 +132,14 @@ class BooleanFieldTypePresenter extends FieldTypePresenter
     {
         return $this->object->getAjaxInput();
     }
+    
+    /**
+     * Returns the value.
+     *
+     * @return boolean
+     */
+    public function __toString()
+    {
+        return (boolean) $this->value();
+    }
 }
