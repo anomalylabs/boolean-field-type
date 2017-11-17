@@ -68,9 +68,9 @@ $colors: (
 		-o-transition: all $boolean_field_type_transition_speed ease-in;
 		transition: all $boolean_field_type_transition_speed ease-in;
 
-		border: 2px solid #dcd9d9;
+		border: 2px solid #d9534f;
 		border-radius: $boolean_field_type_height;
-		background-color: #dcd9d9;
+		background-color: #d9534f;
 
 		-webkit-box-flex: 0;
 		order:1;
@@ -102,12 +102,12 @@ $colors: (
 	}
 	.switch__checkbox:checked + .switch__label
 	{
-		background-color: #735aed;
+		background-color: #5cb85c;
 	}
 	.switch__checkbox:checked + .switch__label,
 	.switch__checkbox:checked + .switch__label:before
 	{
-		border-color: #735aed;
+		border-color: #5cb85c;
 	}
 	.switch__checkbox:checked + .switch__label:before
 	{
