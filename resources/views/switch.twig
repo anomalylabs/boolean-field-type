@@ -1,26 +1,20 @@
-{{ asset_add('styles.css', 'anomaly.field_type.boolean::less/bootstrap-switch.less') }}
-{{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/bootstrap-switch.js') }}
-{{ asset_add('scripts.js', 'anomaly.field_type.boolean::js/input.js') }}
+{{ asset_add('styles.css', 'anomaly.field_type.boolean::scss/switch.scss') }}
 
-<label>
+<div class="switch">
 
-    <input
-            value="0"
-            type="hidden"
-            name="{{ field_type.input_name }}">
+    <input type="checkbox" 
+    class="switch__checkbox switch__checkbox--on-{{ field_type.config.on_color }} switch__checkbox--off-{{ field_type.config.off_color }}" 
+    id="{{ field_type.input_name }}"
+    name="{{ field_type.input_name }}" 
+    
+    {{ field_type.value ? 'checked' }}
+    {{ html_attributes(field_type.attributes) }}
+    {{ field_type.disabled ? 'disabled' }} 
+    {{ field_type.readonly ? 'readonly' }}>
+    
+    <label 
+    class="switch__label" 
+    for="{{ field_type.input_name }}"></label>
 
-    <input
-            type="checkbox"
-            name="{{ field_type.input_name }}"
-            {{ field_type.value ? 'checked' }}
-            data-on-text="{{ trans(field_type.config.on_text ?: 'anomaly.field_type.boolean::choice.yes') }}"
-            data-off-text="{{ trans(field_type.config.off_text ?: 'anomaly.field_type.boolean::choice.no') }}"
-            data-disabled="{{ field_type.disabled ? 'true' : 'false' }}"
-            data-on-color="{{ field_type.config.on_color }}"
-            data-off-color="{{ field_type.config.off_color }}"
-            {{ html_attributes(field_type.attributes) }}
-            {{ field_type.disabled ? 'disabled' }}
-            {{ field_type.readonly ? 'readonly' }}>
-
-    {{ trans(field_type.config.label) }}
-</label>
+</div>
+{{ trans(field_type.config.label) }} 
