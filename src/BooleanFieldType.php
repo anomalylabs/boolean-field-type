@@ -66,6 +66,10 @@ class BooleanFieldType extends FieldType
      */
     public function getInputView()
     {
+        if ($this->inputView) {
+            return $this->inputView;
+        }
+
         return 'anomaly.field_type.boolean::' . $this->mode();
     }
 
